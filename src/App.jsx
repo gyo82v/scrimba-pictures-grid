@@ -12,11 +12,11 @@ function App() {
   const big = `col-span-2 row-span-2`
 
   const imgArray = data.map(d => (
-    <article className={article} key={d.id}>
+    <article className={`${article} ${d.big ? big : d.tall ? tall : d.wide ? wide : ""}`} key={d.id}>
       <img 
         src={d.img} 
         alt={d.alt} 
-        className={`${img} ${d.wide ? wide : d.tall ? tall : d.big ? big : ""}`} 
+        className={img} 
       />
     </article>
   ))
